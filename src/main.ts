@@ -8,6 +8,6 @@ const server = new ApolloServer({
     resolvers: resolvers
 });
 
-server.listen(parseInt(process.env.PORT) | 8000, '0.0.0.0').then(({ url }) => {
+server.listen(+process.env.PORT | 8000, '0.0.0.0').then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`);
 });
